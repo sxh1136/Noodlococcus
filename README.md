@@ -103,3 +103,15 @@ Duplication rate: 12.3209%
 
 Insert size peak (evaluated by paired-end reads): 40
 ```
+## PolyPolish
+```
+bwa index consensus.fasta
+bwa mem -t 16 -a consensus.fasta ../../noodlococcus_short/28645_Noodlococcus_1_trimmed_fastp_fastq.gz > alignments_1.sam
+bwa mem -t 16 -a consensus.fasta ../../noodlococcus_short/28645_Noodlococcus_2_trimmed_fastp_fastq.gz > alignments_2.sam
+polypolish consensus.fasta alignments_1.sam alignments_2.sam > noodlococcus_polypolish.fasta
+```
+## POLCA
+```
+polca.sh -a noodlococcus_polypolish.fasta -r "../../../noodlococcus_short/28645_Noodlococcus_1_trimmed_fastp_fastq.gz ../../../noodlococcus_short/28645_Noodlococcus_2_trimmed_fastp_fastq.gz" -t 16 -m 1G
+mv noodlococcus_polypolish.fasta.PolcaCorrected.fa noodlococcus_final_assembly.fa
+```
