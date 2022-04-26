@@ -58,4 +58,6 @@ trycycler consensus --cluster_dir trycycler/cluster_001
 ```
 
 ## Medaka consensus
+```
 medaka_consensus -i ../../noodloccous_long-reads_filtered.fastq -d 7_final_consensus.fasta -o medaka -m r941_min_high_g360
+```
