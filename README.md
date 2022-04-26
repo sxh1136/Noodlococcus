@@ -46,3 +46,8 @@ Removed "K_utg000001l.fasta" as its ends could not be found in the other assembl
 ```
 trycycler msa --cluster_dir trycycler/cluster_001
 ```
+
+### Partitioning reads
+```
+trycycler partition --reads noodloccous_long-reads_filtered.fastq --cluster_dirs trycycler/cluster_*
+```
