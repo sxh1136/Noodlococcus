@@ -1,5 +1,4 @@
 # Noodlococcus Hybrid Assembly 
-# Long Reads
 
 ## Long Read QC
 ```
@@ -63,8 +62,7 @@ trycycler consensus --cluster_dir trycycler/cluster_001
 medaka_consensus -i ../../noodloccous_long-reads_filtered.fastq -d 7_final_consensus.fasta -o medaka -m r941_min_high_g360
 ```
 
-# Short reads
-## QC
+## Short Read QC
 ```
 fastp --in1 28645_Noodlococcus_1_trimmed.fastq.gz --in2 28645_Noodlococcus_2_trimmed.fastq.gz --out1 28645_Noodlococcus_1_trimmed_fastp_fastq.gz --out2 28645_Noodlococcus_2_trimmed_fastp_fastq.gz --unpaired1 28645_Noodlococcus_unpaired_fastp.fastq.gz --unpaired2 28645_Noodlococcus_unpaired_fastp.fastq.gz
 
