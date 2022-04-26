@@ -51,3 +51,8 @@ trycycler msa --cluster_dir trycycler/cluster_001
 ```
 trycycler partition --reads noodloccous_long-reads_filtered.fastq --cluster_dirs trycycler/cluster_*
 ```
+
+### Generating consensus
+```
+trycycler consensus --cluster_dir trycycler/cluster_001
+```
