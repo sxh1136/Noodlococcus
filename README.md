@@ -5,11 +5,11 @@
 filtlong --min_length 1000 --keep_percent 95 noodloccous_long-reads.fastq > noodloccous_long-reads_filtered.fastq
 ```
 ## Long read assembly with Trycycler
-Subset reads into 12 different samples
+Subset reads into 12 different samples.
 ```
 trycycler subsample --reads noodloccous_long-reads_filtered.fastq --out_dir noodloccous_long-reads_subsets
 ```
-Assemble with 3 different assemblers (4 samples each; Flye, Miniasm+Minipolish, Raven)
+Assemble with 3 different assemblers (4 samples each; Flye, Miniasm+Minipolish, Raven).
 ```
 threads=24  # change as appropriate for your system
 mkdir assemblies
@@ -34,10 +34,10 @@ raven --threads "$threads" noodloccous_long-reads_subsets/sample_12.fastq > asse
 ```
 trycycler cluster --assemblies assemblies/*fasta --reads noodloccous_long-reads_filtered.fastq --out_dir trycycler
 ```
-All assemblies fit into one cluster so can proceed
+All assemblies fit into one cluster so can proceed.
 
 ### Reconciling contigs
 ```
 trycycler reconcile --reads noodloccous_long-reads_filtered.fastq --cluster_dir trycycler/cluster_001
 ```
-Removed "K_utg000001l.fasta" as its ends could not be found in the other assemblies
+Removed "K_utg000001l.fasta" as its ends could not be found in the other assemblies - this is normal.
