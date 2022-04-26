@@ -61,3 +61,45 @@ trycycler consensus --cluster_dir trycycler/cluster_001
 ```
 medaka_consensus -i ../../noodloccous_long-reads_filtered.fastq -d 7_final_consensus.fasta -o medaka -m r941_min_high_g360
 ```
+
+# Short reads
+## QC
+```
+fastp --in1 28645_Noodlococcus_1_trimmed.fastq.gz --in2 28645_Noodlococcus_2_trimmed.fastq.gz --out1 28645_Noodlococcus_1_trimmed_fastp.gz --out2 28645_Noodlococcus_2_trimmed_fastp.fastq.gz --unpaired1 28645_Noodlococcus_unpaired_fastp.fastq.gz --unpaired2 28645_Noodlococcus_unpaired_fastp.fastq.gz
+
+Read1 before filtering:
+total reads: 584307
+total bases: 98535746
+Q20 bases: 96786578(98.2248%)
+Q30 bases: 94782807(96.1913%)
+
+Read2 before filtering:
+total reads: 584307
+total bases: 92250576
+Q20 bases: 89203214(96.6966%)
+Q30 bases: 86014157(93.2397%)
+
+Read1 after filtering:
+total reads: 584296
+total bases: 98493152
+Q20 bases: 96745337(98.2254%)
+Q30 bases: 94743248(96.1927%)
+
+Read2 after filtering:
+total reads: 584296
+total bases: 92067549
+Q20 bases: 89055897(96.7289%)
+Q30 bases: 85900893(93.302%)
+
+Filtering result:
+reads passed filter: 1168592
+reads failed due to low quality: 2
+reads failed due to too many N: 20
+reads failed due to too short: 0
+reads with adapter trimmed: 28280
+bases trimmed due to adapters: 221731
+
+Duplication rate: 12.3209%
+
+Insert size peak (evaluated by paired-end reads): 40
+```
