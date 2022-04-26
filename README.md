@@ -30,5 +30,14 @@ flye --nano-raw noodloccous_long-reads_subsets/sample_10.fastq --threads "$threa
 miniasm_and_minipolish.sh noodloccous_long-reads_subsets/sample_11.fastq "$threads" > assembly_11.gfa && any2fasta assembly_11.gfa > assemblies/assembly_11.fasta && rm assembly_11.gfa
 raven --threads "$threads" noodloccous_long-reads_subsets/sample_12.fastq > assemblies/assembly_12.fasta && rm raven.cereal
 ```
-Clustering contigs
+### Clustering contigs
+```
 trycycler cluster --assemblies assemblies/*fasta --reads noodloccous_long-reads_filtered.fastq --out_dir trycycler
+```
+All assemblies fit into one cluster so can proceed
+
+### Reconciling contigs
+```
+trycycler reconcile --reads noodloccous_long-reads_filtered.fastq --cluster_dir trycycler/cluster_001
+```
+Removed "K_utg000001l.fasta" as its ends could not be found in the other assemblies
