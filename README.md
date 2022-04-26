@@ -65,7 +65,7 @@ medaka_consensus -i ../../noodloccous_long-reads_filtered.fastq -d 7_final_conse
 # Short reads
 ## QC
 ```
-fastp --in1 28645_Noodlococcus_1_trimmed.fastq.gz --in2 28645_Noodlococcus_2_trimmed.fastq.gz --out1 28645_Noodlococcus_1_trimmed_fastp.gz --out2 28645_Noodlococcus_2_trimmed_fastp.fastq.gz --unpaired1 28645_Noodlococcus_unpaired_fastp.fastq.gz --unpaired2 28645_Noodlococcus_unpaired_fastp.fastq.gz
+fastp --in1 28645_Noodlococcus_1_trimmed.fastq.gz --in2 28645_Noodlococcus_2_trimmed.fastq.gz --out1 28645_Noodlococcus_1_trimmed_fastp_fastq.gz --out2 28645_Noodlococcus_2_trimmed_fastp_fastq.gz --unpaired1 28645_Noodlococcus_unpaired_fastp.fastq.gz --unpaired2 28645_Noodlococcus_unpaired_fastp.fastq.gz
 
 Read1 before filtering:
 total reads: 584307
