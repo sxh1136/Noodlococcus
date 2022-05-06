@@ -114,3 +114,7 @@ polypolish consensus.fasta alignments_1.sam alignments_2.sam > noodlococcus_poly
 polca.sh -a noodlococcus_polypolish.fasta -r "../../../noodlococcus_short/28645_Noodlococcus_1_trimmed_fastp_fastq.gz ../../../noodlococcus_short/28645_Noodlococcus_2_trimmed_fastp_fastq.gz" -t 16 -m 1G
 mv noodlococcus_polypolish.fasta.PolcaCorrected.fa noodlococcus_final_assembly.fa
 ```
+
+# Phylogenetic analysis
+Downloaded all Kocuria genomes from RefSeq (Genbank genomes were all duplicated in RefSeq and a couple were weirdly missing from GenBank)
+https://www.ncbi.nlm.nih.gov/datasets/genomes/?taxon=57493
