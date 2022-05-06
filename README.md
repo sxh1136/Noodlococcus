@@ -116,5 +116,5 @@ mv noodlococcus_polypolish.fasta.PolcaCorrected.fa noodlococcus_final_assembly.f
 ```
 
 # Phylogenetic analysis
-Downloaded all Kocuria genomes from RefSeq (Genbank genomes were all duplicated in RefSeq and a couple were weirdly missing from GenBank)
+Downloaded all Kocuria genomes from RefSeq (Genbank genomes were all duplicated in RefSeq and a couple were weirdly missing from GenBank) - 
 https://www.ncbi.nlm.nih.gov/datasets/genomes/?taxon=57493
